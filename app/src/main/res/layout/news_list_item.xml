@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="6dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="6dp"
+                tools:text="ABC News"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/news_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/ic_launcher_background"
+                    android:id="@+id/news_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    tools:text="Title of news"
+                    android:padding="8dp"
+                    android:background="#50000000"
+                    android:textColor="#ffffff"
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    tools:text="By author"
+                    android:id="@+id/news_author"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    tools:text="Published date"
+                    android:id="@+id/news_date"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
